@@ -110,10 +110,10 @@ const Register = () => {
                             />
                             <Input
                                 id="confirmPassword"
-                                label="Confirm"
+                                label="Confirm Password"
                                 type="password"
                                 required
-                                placeholder="••••••••"
+                                placeholder="Repeat password"
                                 value={formData.confirmPassword}
                                 onChange={handleChange}
                             />
