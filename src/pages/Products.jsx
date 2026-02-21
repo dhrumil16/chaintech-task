@@ -104,7 +104,7 @@ const Products = () => {
                     <p className="text-gray-500 mt-2">Try clarifying your search or choosing a different category.</p>
                 </div>
             ) : (
-                <div className="grid grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-8 pb-16">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 pb-16">
                     {filteredProducts.map((product) => (
                         <ProductCard key={product.id} product={product} />
                     ))}
