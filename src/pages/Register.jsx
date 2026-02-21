@@ -53,156 +53,131 @@ const Register = () => {
     };
 
     return (
-        <div className="min-h-screen flex bg-slate-50 font-sans">
-            {/* Left Side - Professional Header Design (Order-2 to show on right in desktop) */}
-            <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-purple-950 order-2">
-                {/* Abstract Pattern Overlay */}
-                <div className="absolute inset-0 z-10">
-                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-bl from-purple-600/40 to-indigo-800/60 backdrop-blur-[2px]"></div>
-                    <div className="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-t from-black/20 to-transparent"></div>
+        <div className="min-h-screen relative flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 font-sans overflow-hidden">
+            {/* Immersive Background */}
+            <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 bg-purple-950"></div>
+                {/* Visual Interest Overlay */}
+                <div className="absolute inset-0 opacity-40">
+                    <img
+                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=2000"
+                        alt="Background"
+                        className="w-full h-full object-cover mix-blend-overlay"
+                    />
                 </div>
-
-                <img
-                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=1500"
-                    alt="Shopping Fashion"
-                    className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity scale-110 pointer-events-none"
-                />
-
-                <div className="relative z-20 flex flex-col justify-between p-16 text-white w-full">
-                    {/* Logo/Name */}
-                    <div className="flex items-center gap-3 justify-end">
-                        <span className="text-3xl font-black tracking-tighter uppercase text-right">E-Shop</span>
-                        <div className="p-3 bg-white rounded-2xl shadow-xl shadow-white/10">
-                            <ShoppingBag className="text-purple-600" size={32} strokeWidth={3} />
-                        </div>
-                    </div>
-
-                    {/* Hero Text */}
-                    <div className="text-right">
-                        <Sparkles className="text-purple-300 mb-6 ml-auto" size={40} />
-                        <h1 className="text-6xl font-black mb-6 leading-tight tracking-tight">
-                            Start Your <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-l from-purple-300 to-indigo-200">Journey.</span>
-                        </h1>
-                        <p className="text-xl text-purple-100/80 ml-auto max-w-sm leading-relaxed font-medium mb-12">
-                            Join thousands of happy customers and experience commerce redefined with our exclusive member perks.
-                        </p>
-
-                        <div className="flex items-center gap-4 py-5 px-6 sm:py-6 sm:px-8 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 w-fit ml-auto">
-                            <div className="flex -space-x-3">
-                                {[4, 5, 6].map(i => (
-                                    <div key={i} className="w-10 h-10 rounded-full border-2 border-purple-600 bg-purple-100 flex items-center justify-center text-xs font-bold text-purple-600">
-                                        {String.fromCharCode(64 + i)}
-                                    </div>
-                                ))}
-                            </div>
-                            <span className="text-sm font-bold text-purple-100">JOIN THE COMMUNITY</span>
-                        </div>
-                    </div>
-
-                    {/* Footer branding info */}
-                    <div className="text-purple-200/60 text-sm font-bold tracking-widest uppercase text-right">
-                        MADE FOR TRENDSETTERS
-                    </div>
-                </div>
+                {/* Soft Gradient & Blur Circles */}
+                <div className="absolute inset-0 bg-gradient-to-bl from-purple-900/90 via-purple-950/80 to-indigo-900/90 backdrop-blur-[2px]"></div>
+                <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+                <div className="absolute top-1/4 -left-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] animate-pulse-slow-reverse"></div>
             </div>
 
-            {/* Right Side - Registration Form Container */}
-            <div className="flex-1 flex flex-col justify-center items-center py-12 px-6 sm:px-12 lg:px-24 order-1">
-                <div className="w-full max-w-md">
-                    {/* Mobile Only Header */}
-                    <div className="lg:hidden flex justify-center mb-8">
-                        <div className="flex items-center gap-3">
-                            <div className="p-2.5 bg-purple-600 rounded-xl shadow-lg">
-                                <ShoppingBag className="text-white" size={24} strokeWidth={3} />
-                            </div>
-                            <span className="text-2xl font-black tracking-tighter uppercase text-gray-900">E-Shop</span>
+            <div className="relative z-10 w-full max-w-md animate-fade-in-up">
+                {/* Website Branding / Logo */}
+                <div className="flex flex-col items-center mb-10">
+                    <Link to="/" className="flex items-center gap-4 group transition-transform hover:scale-105">
+                        <div className="p-4 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl shadow-purple-500/10 group-hover:border-white/40 transition-all duration-500">
+                            <ShoppingBag className="text-white" size={32} strokeWidth={3} />
                         </div>
+                        <span className="text-4xl font-black tracking-tighter uppercase text-white drop-shadow-lg">E-Shop</span>
+                    </Link>
+                    <div className="mt-4 flex items-center gap-2">
+                        <div className="h-[1px] w-8 bg-purple-400/30"></div>
+                        <span className="text-[10px] font-black text-purple-300 uppercase tracking-[0.4em]">Exclusive Community</span>
+                        <div className="h-[1px] w-8 bg-purple-400/30"></div>
+                    </div>
+                </div>
+
+                {/* Centered Glassmorphism Card */}
+                <div className="bg-white/95 backdrop-blur-2xl p-8 sm:p-12 rounded-[3.5rem] shadow-[0_40px_100px_rgba(0,0,0,0.3)] border border-white/20 relative overflow-hidden">
+                    {/* Interior Glow */}
+                    <div className="absolute top-0 left-0 w-32 h-32 bg-purple-500/5 blur-3xl rounded-full"></div>
+
+                    <div className="mb-10 text-center">
+                        <h2 className="text-3xl font-black text-gray-900 mb-2 tracking-tight">Create Account</h2>
+                        <p className="text-gray-400 font-bold text-sm tracking-wide">Join thousands of happy customers today</p>
                     </div>
 
-                    <div className="bg-white p-8 sm:p-12 rounded-[2.5rem] shadow-[0_30px_80px_rgba(0,0,0,0.05)] border border-gray-100">
-                        <div className="mb-8 text-center sm:text-left">
-                            <h2 className="text-3xl font-black text-gray-900 mb-3 tracking-tight flex items-center gap-3">
-                                <UserPlus className="text-purple-500 lg:hidden" size={28} />
-                                Create Account
-                            </h2>
-                            <p className="text-gray-400 font-bold">Join the E-Shop community.</p>
-                        </div>
+                    <form className="space-y-5" onSubmit={handleSubmit}>
+                        <Input
+                            id="name"
+                            label="Full Name"
+                            type="text"
+                            required
+                            placeholder="Enter your name"
+                            value={formData.name}
+                            onChange={handleChange}
+                        />
 
-                        <form className="space-y-5" onSubmit={handleSubmit}>
-                            <Input
-                                id="name"
-                                label="Full Name"
-                                type="text"
-                                required
-                                placeholder="Enter your name"
-                                value={formData.name}
-                                onChange={handleChange}
-                            />
+                        <Input
+                            id="email"
+                            label="Email Address"
+                            type="email"
+                            required
+                            placeholder="name@domain.com"
+                            value={formData.email}
+                            onChange={handleChange}
+                        />
 
-                            <Input
-                                id="email"
-                                label="Email address"
-                                type="email"
-                                required
-                                placeholder="name@domain.com"
-                                value={formData.email}
-                                onChange={handleChange}
-                            />
-
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <Input
                                 id="password"
                                 label="Password"
                                 type="password"
                                 required
-                                placeholder="Create a password"
+                                placeholder="••••••••"
                                 value={formData.password}
                                 onChange={handleChange}
                             />
-
                             <Input
                                 id="confirmPassword"
-                                label="Confirm Password"
+                                label="Confirm"
                                 type="password"
                                 required
-                                placeholder="Repeat your password"
+                                placeholder="••••••••"
                                 value={formData.confirmPassword}
                                 onChange={handleChange}
                             />
+                        </div>
 
-                            {error && (
-                                <div className="text-red-900 text-sm bg-red-50 p-4 rounded-2xl border border-red-100 font-bold animate-shake">
-                                    {error}
-                                </div>
-                            )}
-
-                            <div className="pt-2">
-                                <Button
-                                    type="submit"
-                                    isLoading={loading}
-                                    variant="primary"
-                                    className="w-full !text-lg !font-black !py-4 !rounded-2xl !bg-purple-600 !border-purple-600 shadow-xl shadow-purple-100 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
-                                >
-                                    Start your journey
-                                </Button>
+                        {error && (
+                            <div className="text-red-900 text-xs bg-red-50 p-4 rounded-2xl border border-red-100 font-bold animate-shake text-center">
+                                {error}
                             </div>
+                        )}
 
-                            <div className="text-center pt-6">
-                                <p className="text-[15px] text-gray-400 font-bold mb-1">
-                                    Already have an account?
-                                </p>
-                                <Link to="/login" className="text-purple-600 hover:text-purple-500 underline underline-offset-4 decoration-2 transition-all font-bold text-[15px]">
-                                    Sign in instead
-                                </Link>
-                            </div>
-                        </form>
-                    </div>
+                        <div className="pt-4">
+                            <Button
+                                type="submit"
+                                isLoading={loading}
+                                variant="primary"
+                                className="w-full !text-lg !font-black !py-4.5 !rounded-2xl !bg-purple-600 !border-purple-600 shadow-2xl shadow-purple-100 hover:shadow-purple-300/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                            >
+                                Get Started
+                            </Button>
+                        </div>
 
-                    <div className="mt-8 text-center">
-                        <p className="text-xs text-gray-400 font-bold tracking-widest uppercase">
-                            Premium • Secure • Exclusive
-                        </p>
+                        <div className="text-center pt-8 border-t border-gray-50">
+                            <p className="text-sm text-gray-400 font-bold mb-2">
+                                Already a member?
+                            </p>
+                            <Link to="/login" className="group text-purple-600 hover:text-purple-500 transition-all font-black text-sm uppercase tracking-wider flex items-center justify-center gap-1.5">
+                                Sign In to Account
+                                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                        </div>
+                    </form>
+                </div>
+
+                {/* Global Footer Info */}
+                <div className="mt-12 text-center space-y-4">
+                    <div className="flex items-center justify-center gap-6 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+                        <span className="text-[10px] font-black text-white uppercase tracking-[0.2em]">Privacy First</span>
+                        <span className="text-[10px] font-black text-white uppercase tracking-[0.2em]">24/7 Support</span>
+                        <span className="text-[10px] font-black text-white uppercase tracking-[0.2em]">Member Perks</span>
                     </div>
+                    <p className="text-[10px] text-purple-300/40 font-bold tracking-[0.3em] uppercase">
+                        Trendsetting Commerce Since 2024
+                    </p>
                 </div>
             </div>
         </div>
