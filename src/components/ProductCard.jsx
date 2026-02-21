@@ -64,7 +64,7 @@ const ProductCard = ({ product }) => {
                             }`}
                     >
                         <ShoppingBag size={18} />
-                        <span className="hidden xs:inline">Add to cart</span>
+                        <span className="sm:inline">Add to cart</span>
                     </Button>
                 </div>
             </div>
