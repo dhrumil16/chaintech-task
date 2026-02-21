@@ -1,18 +1,21 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
+import { useToast } from '../context/ToastContext';
 import { LogOut, ShoppingCart, User, Home, Package, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const MainLayout = ({ children }) => {
     const { logout, user } = useAuth();
     const { getCartItemsCount } = useCart();
+    const { showToast } = useToast();
     const navigate = useNavigate();
     const location = useLocation();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const handleLogout = () => {
         logout();
+        showToast('Logged out successfully', 'success');
         navigate('/login');
     };
 
