@@ -1,52 +1,73 @@
-# E-Commerce Dashboard
+# E-Shop Dashboard 🛍️
 
-A responsive E-Commerce web application built with React, Vite, and Tailwind CSS.
+A premium, high-performance E-Commerce platform built with modern web technologies.
 
-## Features
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://eshopchaintech.netlify.app/)
 
-- **Authentication**: User registration and login with session management (5-minute timeout).
-- **Dashboard**: User-specific dashboard with quick links.
-- **Product Listing**: Browse products fetched from Fake Store API with search functionality.
-- **Cart Management**: Add to cart, update quantities, remove items, and view totals.
-- **User Profile**: View and edit user details.
-- **Responsive Design**: Fully responsive UI for mobile, tablet, and desktop.
+## ✨ Overview
 
-## Tech Stack
+**E-Shop** is a sophisticated e-commerce dashboard designed to provide a seamless and immersive shopping experience. Built with **React 19** and **Tailwind CSS**, it combines high-speed performance with a boutique-level aesthetic, featuring glassmorphism, smooth micro-animations, and a highly intuitive user interface.
 
-- **Frontend**: React (Vite)
-- **Styling**: Tailwind CSS
-- **Routing**: React Router DOM
-- **State Management**: Context API
-- **Icons**: Lucide React
-- **API**: Fake Store API
+## 🚀 Key Features
 
-## Getting Started
+*   **Premium UI/UX**: Immersive glassmorphism design, elegant gradients, and a multi-card profile system inspired by modern account portals.
+*   **Intelligent Authentication**: Secure Login and Registration flows powered by React Context API, featuring an automatic **5-minute session timeout** for enhanced security.
+*   **Dynamic Product Discovery**: Real-time product browsing fetched from FakeStoreAPI, complete with ₹ (Rupee) currency support and "In Cart" visual status.
+*   **Robust Shopping Cart**: Comprehensive cart management with instant quantity controls, "Clear All" functionality, and persistent state.
+*   **Personalized user Profile**: A creative profile hub with editable personal details, gradient avatar generation, and automated membership tracking.
+*   **Instant Feedback**: A custom-built **Toast Notification** system for real-time confirmation of user actions.
+*   **Fully Responsive**: Meticulously crafted for a pixel-perfect experience across mobile, tablet, and desktop devices.
 
-1.  **Install dependencies:**
+## 🛠️ Tech Stack
+
+- **Core**: [React 19](https://react.dev/) (Vite)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Modern Utilities & Custom Design System)
+- **Routing**: [React Router 7](https://reactrouter.com/)
+- **State Management**: [React Context API](https://react.dev/learn/passing-data-deeply-with-context)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **API**: [Fake Store API](https://fakestoreapi.com/)
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/   # Atomic UI components (Inputs, Buttons, Cards)
+├── context/      # Global state providers (Auth, Cart, Toast)
+├── layouts/      # Main application shells and navigation
+├── pages/        # Full-page views (Dashboard, Products, Profile)
+├── hooks/        # Custom logic hooks (useProducts)
+└── utils/        # Helper functions & formatting utilities
+```
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+- Node.js (v18.0.0 or higher)
+- npm or yarn
+
+### Installation
+
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/your-username/chaintech-task.git
+    cd chaintech-task
+    ```
+
+2.  **Install Dependencies**
     ```bash
     npm install
     ```
 
-2.  **Run the development server:**
+3.  **Launch the Development Server**
     ```bash
     npm run dev
     ```
 
-3.  **Open your browser:**
-    Navigate to `http://localhost:5173` (or the URL shown in the terminal).
+## 🎨 Design Philosophy
 
-## Usage
+E-Shop adheres to a **"Visual Excellence"** mantra. We prioritize curated color palettes over generic defaults, using HSL-tailored shades, smooth drop shadows, and Inter/Outfit typography to create a product that feels premium, professional, and state-of-the-art.
 
-1.  **Register** a new account.
-2.  **Login** with your credentials.
-3.  Browse **Products** and add items to your **Cart**.
-4.  Manage your **Cart** or update your **Profile**.
-5.  Session will automatically expire after 5 minutes of inactivity (simulated).
+---
 
-## Project Structure
-
-- `src/components`: Reusable UI components.
-- `src/context`: React Context for Auth and Cart.
-- `src/layouts`: Layout components (Navbar).
-- `src/pages`: Application pages.
-- `src/utils`: Utility functions.
+**© 2024 E-Shop Dashboard all right reserved**

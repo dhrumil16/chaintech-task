@@ -47,7 +47,11 @@ export const AuthProvider = ({ children }) => {
             throw new Error('User already exists');
         }
 
-        const newUser = { ...userData, id: Date.now() };
+        const newUser = {
+            ...userData,
+            id: Date.now(),
+            memberSince: new Date().toLocaleDateString('en-IN', { month: 'long', year: 'numeric' })
+        };
         users.push(newUser);
         localStorage.setItem('users', JSON.stringify(users));
         return true;
