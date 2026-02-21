@@ -138,7 +138,6 @@ const Register = () => {
                                 placeholder="Enter your name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="!rounded-2xl !py-3 !border-gray-100 focus:!ring-purple-600/10 focus:!border-purple-600"
                             />
 
                             <Input
@@ -149,7 +148,6 @@ const Register = () => {
                                 placeholder="name@domain.com"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="!rounded-2xl !py-3 !border-gray-100 focus:!ring-purple-600/10 focus:!border-purple-600"
                             />
 
                             <Input
@@ -160,7 +158,6 @@ const Register = () => {
                                 placeholder="Create a password"
                                 value={formData.password}
                                 onChange={handleChange}
-                                className="!rounded-2xl !py-3 !border-gray-100 focus:!ring-purple-600/10 focus:!border-purple-600"
                             />
 
                             <Input
@@ -171,7 +168,6 @@ const Register = () => {
                                 placeholder="Repeat your password"
                                 value={formData.confirmPassword}
                                 onChange={handleChange}
-                                className="!rounded-2xl !py-3 !border-gray-100 focus:!ring-purple-600/10 focus:!border-purple-600"
                             />
 
                             {error && (

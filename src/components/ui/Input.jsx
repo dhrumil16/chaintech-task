@@ -16,10 +16,10 @@ const Input = ({ label, type = 'text', id, error, ...props }) => {
                 <input
                     id={id}
                     type={isPassword ? (showPassword ? 'text' : 'password') : type}
-                    className={`w-full px-5 py-3.5 border rounded-[1.25rem] bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-4 transition-all duration-300 placeholder:text-gray-300 text-gray-700 appearance-none
+                    className={`w-full px-5 py-4 border-2 rounded-[1.5rem] bg-white backdrop-blur-sm focus:outline-none focus:ring-4 transition-all duration-300 placeholder:text-gray-300 text-gray-700 appearance-none
                         ${error
-                            ? 'border-red-200 focus:ring-red-500/10 focus:border-red-400'
-                            : 'border-gray-100 focus:ring-indigo-500/10 focus:border-indigo-400'
+                            ? 'border-red-100 focus:ring-red-500/10 focus:border-red-400'
+                            : 'border-gray-50 focus:ring-indigo-500/10 focus:border-indigo-500'
                         } 
                         ${isPassword ? 'pr-12' : ''} 
                         [&:-webkit-autofill]:shadow-[0_0_0_1000px_white_inset]

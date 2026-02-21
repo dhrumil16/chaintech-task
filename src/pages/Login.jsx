@@ -117,7 +117,6 @@ const Login = () => {
                                 placeholder="name@domain.com"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="!rounded-2xl !py-3 !border-gray-100 focus:!ring-indigo-600/10 focus:!border-indigo-600"
                             />
 
                             <Input
@@ -128,7 +127,6 @@ const Login = () => {
                                 placeholder="••••••••"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="!rounded-2xl !py-3 !border-gray-100 focus:!ring-indigo-600/10 focus:!border-indigo-600"
                             />
 
                             {error && (
