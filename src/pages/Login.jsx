@@ -153,7 +153,7 @@ const Login = () => {
                                 <p className="text-[15px] text-gray-400 font-bold">
                                     New to E-Shop?{' '}
                                     <Link to="/register" className="text-indigo-600 hover:text-indigo-500 underline underline-offset-4 decoration-2 transition-all">
-                                        Create your dashboard
+                                        Create your account
                                     </Link>
                                 </p>
                             </div>
