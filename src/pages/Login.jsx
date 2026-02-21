@@ -105,7 +105,7 @@ const Login = () => {
                     <div className="bg-white p-8 sm:p-12 rounded-[2.5rem] shadow-[0_30px_80px_rgba(0,0,0,0.05)] border border-gray-100">
                         <div className="mb-10 text-center sm:text-left">
                             <h2 className="text-3xl font-black text-gray-900 mb-3 tracking-tight">Welcome Home</h2>
-                            <p className="text-gray-400 font-bold">Please enter your credentials to log in.</p>
+                            <p className="text-gray-400 font-bold">Log in to your account.</p>
                         </div>
 
                         <form className="space-y-7" onSubmit={handleSubmit}>

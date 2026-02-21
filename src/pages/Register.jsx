@@ -126,7 +126,7 @@ const Register = () => {
                                 <UserPlus className="text-purple-500 lg:hidden" size={28} />
                                 Create Account
                             </h2>
-                            <p className="text-gray-400 font-bold">Join the premium community of E-Shop.</p>
+                            <p className="text-gray-400 font-bold">Join the E-Shop community.</p>
                         </div>
 
                         <form className="space-y-5" onSubmit={handleSubmit}>
