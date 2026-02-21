@@ -42,7 +42,7 @@ const Cart = () => {
                         <div key={item.id} className="bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col sm:flex-row items-center gap-6 group hover:border-indigo-100 transition-colors">
                             <div className="w-full sm:w-24 h-24 bg-white p-2 rounded-xl border border-gray-100 flex-shrink-0">
                                 <img
-                                    src={item.image}
+                                    src={item.thumbnail}
                                     alt={item.title}
                                     className="w-full h-full object-contain"
                                 />
