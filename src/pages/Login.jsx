@@ -34,37 +34,25 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen relative flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 font-sans overflow-hidden">
-            {/* Immersive Background */}
-            <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-indigo-950"></div>
-                {/* Soft Gradient & Blur Circles */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-indigo-900/95 via-indigo-950/90 to-purple-900/95 backdrop-blur-[2px]"></div>
-                <div className="absolute top-1/4 -left-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px] animate-pulse-slow"></div>
-                <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/5 rounded-full blur-[100px] animate-pulse-slow-reverse"></div>
-            </div>
-
-            <div className="relative z-10 w-full max-w-md animate-fade-in-up">
+        <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 font-sans bg-white">
+            <div className="w-full max-w-md animate-fade-in-up">
                 {/* Website Branding / Logo */}
                 <div className="flex flex-col items-center mb-10">
                     <Link to="/" className="flex items-center gap-4 group transition-transform hover:scale-105">
-                        <div className="p-4 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl shadow-indigo-500/10 group-hover:border-white/40 transition-all duration-500">
+                        <div className="p-4 bg-indigo-600 rounded-2xl shadow-xl shadow-indigo-100 group-hover:bg-indigo-700 transition-all duration-500">
                             <ShoppingBag className="text-white" size={32} strokeWidth={3} />
                         </div>
-                        <span className="text-4xl font-black tracking-tighter uppercase text-white drop-shadow-lg">E-Shop</span>
+                        <span className="text-4xl font-black tracking-tighter uppercase text-gray-900">E-Shop</span>
                     </Link>
                     <div className="mt-4 flex items-center gap-2">
-                        <div className="h-[1px] w-8 bg-indigo-400/30"></div>
-                        <span className="text-[10px] font-black text-indigo-300 uppercase tracking-[0.4em]">Premium Commerce</span>
-                        <div className="h-[1px] w-8 bg-indigo-400/30"></div>
+                        <div className="h-[1px] w-8 bg-gray-200"></div>
+                        <span className="text-[10px] font-black text-gray-400 uppercase tracking-[0.4em]">Premium Commerce</span>
+                        <div className="h-[1px] w-8 bg-gray-200"></div>
                     </div>
                 </div>
 
-                {/* Centered Glassmorphism Card */}
-                <div className="bg-white/95 backdrop-blur-2xl p-8 sm:p-12 rounded-[3.5rem] shadow-[0_40px_100px_rgba(0,0,0,0.3)] border border-white/20 relative overflow-hidden">
-                    {/* Interior Glow */}
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 blur-3xl rounded-full"></div>
-
+                {/* Centered Minimal Card */}
+                <div className="bg-white p-8 sm:p-12 rounded-[3.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-gray-100 relative overflow-hidden">
                     <div className="mb-10 text-center">
                         <h2 className="text-3xl font-black text-gray-900 mb-2 tracking-tight">Welcome Back</h2>
                         <p className="text-gray-400 font-bold text-sm tracking-wide">Enter your details to access your dashboard</p>
@@ -130,12 +118,12 @@ const Login = () => {
 
                 {/* Global Footer Info */}
                 <div className="mt-12 text-center space-y-4">
-                    <div className="flex items-center justify-center gap-6 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-                        <span className="text-[10px] font-black text-white uppercase tracking-[0.2em]">Secure Checkout</span>
-                        <span className="text-[10px] font-black text-white uppercase tracking-[0.2em]">Member Perks</span>
-                        <span className="text-[10px] font-black text-white uppercase tracking-[0.2em]">Fast Delivery</span>
+                    <div className="flex items-center justify-center gap-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                        <span className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">Secure Checkout</span>
+                        <span className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">Member Perks</span>
+                        <span className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">Fast Delivery</span>
                     </div>
-                    <p className="text-[10px] text-indigo-300/40 font-bold tracking-[0.3em] uppercase">
+                    <p className="text-[10px] text-gray-300 font-bold tracking-[0.3em] uppercase">
                         © 2024 E-SHOP DASHBOARD • ALL RIGHTS RESERVED
                     </p>
                 </div>
