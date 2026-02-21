@@ -4,7 +4,7 @@ import { useToast } from '../context/ToastContext';
 import { useNavigate, Link } from 'react-router-dom';
 import Input from '../components/ui/Input';
 import Button from '../components/ui/Button';
-import { ShoppingBag, Sparkles, UserPlus } from 'lucide-react';
+import { ShoppingBag, ArrowRight } from 'lucide-react';
 
 const Register = () => {
     const [formData, setFormData] = useState({

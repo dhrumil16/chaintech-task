@@ -4,7 +4,7 @@ import { useToast } from '../context/ToastContext';
 import { useNavigate, Link } from 'react-router-dom';
 import Input from '../components/ui/Input';
 import Button from '../components/ui/Button';
-import { ShoppingBag, Star, ShieldCheck } from 'lucide-react';
+import { ShoppingBag, ShieldCheck, ArrowRight } from 'lucide-react';
 
 const Login = () => {
     const [email, setEmail] = useState('');
