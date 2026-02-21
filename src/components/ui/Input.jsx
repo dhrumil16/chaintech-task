@@ -16,7 +16,14 @@ const Input = ({ label, type = 'text', id, error, ...props }) => {
                 <input
                     id={id}
                     type={isPassword ? (showPassword ? 'text' : 'password') : type}
-                    className={`w-full px-4 py-3 border rounded-xl shadow-sm bg-white focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all duration-200 placeholder-gray-400 ${error ? 'border-red-500 focus:ring-red-500/10 focus:border-red-500' : 'border-gray-200'} ${isPassword ? 'pr-12' : ''}`}
+                    className={`w-full px-5 py-3.5 border rounded-[1.25rem] bg-white/50 backdrop-blur-sm focus:outline-none focus:ring-4 transition-all duration-300 placeholder:text-gray-300 text-gray-700 appearance-none
+                        ${error
+                            ? 'border-red-200 focus:ring-red-500/10 focus:border-red-400'
+                            : 'border-gray-100 focus:ring-indigo-500/10 focus:border-indigo-400'
+                        } 
+                        ${isPassword ? 'pr-12' : ''} 
+                        [&:-webkit-autofill]:shadow-[0_0_0_1000px_white_inset]
+                        ${props.className || ''}`}
                     {...props}
                 />
                 {isPassword && (
