@@ -1,10 +1,12 @@
 import { useCart } from '../context/CartContext';
+import { useToast } from '../context/ToastContext';
 import Button from '../components/ui/Button';
 import { Trash2, Plus, Minus, ArrowLeft, ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const { cart, removeFromCart, updateQuantity, getCartTotal, clearCart, getCartItemsCount } = useCart();
+    const { showToast } = useToast();
 
     const formatPrice = (price) => Math.round(price * 83);
 
@@ -117,9 +119,19 @@ const Cart = () => {
                             </div>
                         </div>
 
-                        <Button variant="primary" className="py-3 text-base shadow-indigo-500/25">
+                        <Button
+                            onClick={() => {
+                                showToast('Order placed successfully! 🎉', 'success');
+                                clearCart();
+                            }}
+                            variant="primary"
+                            className="py-3 text-base shadow-indigo-500/25"
+                        >
                             Checkout
                         </Button>
+                        <Link to="/products" className="block text-center mt-4 text-sm font-medium text-gray-500 hover:text-indigo-600 transition-colors">
+                            Continue Shopping
+                        </Link>
                     </div>
                 </div>
             </div>
