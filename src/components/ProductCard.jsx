@@ -58,10 +58,10 @@ const ProductCard = ({ product }) => {
                     {product.title}
                 </h3>
 
-                <div className="mt-auto flex items-center justify-between gap-2 pt-2">
-                    <div className="flex flex-col">
-                        <span className="text-[9px] text-gray-400 font-semibold uppercase tracking-wider">Price</span>
-                        <span className="text-base sm:text-xl font-black text-gray-900 leading-none">
+                <div className="mt-auto flex flex-col items-center gap-3 pt-2 text-center">
+                    <div className="flex flex-col items-center">
+                        <span className="text-[9px] text-gray-400 font-semibold uppercase tracking-wider mb-0.5">Price</span>
+                        <span className="text-xl sm:text-2xl font-black text-gray-900 leading-none">
                             ₹{Math.round(product.price * 83)}
                         </span>
                     </div>
@@ -69,13 +69,13 @@ const ProductCard = ({ product }) => {
                     <Button
                         onClick={(e) => { e.stopPropagation(); handleAddToCart(e); }}
                         variant={isInCart ? 'success' : 'primary'}
-                        className={`!w-auto !py-2 !px-3 !rounded-xl flex items-center justify-center gap-1.5 transition-all duration-500 shadow-lg ${isInCart
+                        className={`!w-full !py-3 !px-4 !rounded-xl flex items-center justify-center gap-2 transition-all duration-500 shadow-lg ${isInCart
                             ? '!bg-emerald-500 !border-emerald-500 !shadow-emerald-200 hover:!bg-emerald-600'
                             : '!bg-indigo-600 !border-indigo-600 !shadow-indigo-200 hover:!bg-indigo-700'
                             }`}
                     >
-                        <ShoppingBag size={14} className={isInCart ? 'animate-bounce' : ''} />
-                        <span className="font-bold text-[11px] whitespace-nowrap">
+                        <ShoppingBag size={18} className={isInCart ? 'animate-bounce' : ''} />
+                        <span className="font-bold text-sm whitespace-nowrap">
                             {isInCart ? 'Added' : 'Add to cart'}
                         </span>
                     </Button>
