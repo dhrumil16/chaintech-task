@@ -58,7 +58,7 @@ const ProductCard = ({ product }) => {
                     {product.title}
                 </h3>
 
-                <div className="mt-auto flex flex-col gap-2">
+                <div className="mt-auto flex items-center justify-between gap-2 pt-2">
                     <div className="flex flex-col">
                         <span className="text-[9px] text-gray-400 font-semibold uppercase tracking-wider">Price</span>
                         <span className="text-base sm:text-xl font-black text-gray-900 leading-none">
@@ -69,13 +69,15 @@ const ProductCard = ({ product }) => {
                     <Button
                         onClick={(e) => { e.stopPropagation(); handleAddToCart(e); }}
                         variant={isInCart ? 'success' : 'primary'}
-                        className={`!w-full !py-2 !px-3 !rounded-xl flex items-center justify-center gap-1.5 transition-all duration-500 shadow-lg ${isInCart
-                                ? '!bg-emerald-500 !border-emerald-500 !shadow-emerald-200 hover:!bg-emerald-600'
-                                : '!bg-indigo-600 !border-indigo-600 !shadow-indigo-200 hover:!bg-indigo-700'
+                        className={`!w-auto !py-2 !px-3 !rounded-xl flex items-center justify-center gap-1.5 transition-all duration-500 shadow-lg ${isInCart
+                            ? '!bg-emerald-500 !border-emerald-500 !shadow-emerald-200 hover:!bg-emerald-600'
+                            : '!bg-indigo-600 !border-indigo-600 !shadow-indigo-200 hover:!bg-indigo-700'
                             }`}
                     >
                         <ShoppingBag size={14} className={isInCart ? 'animate-bounce' : ''} />
-                        <span className="font-bold text-[11px] whitespace-nowrap">Add to cart</span>
+                        <span className="font-bold text-[11px] whitespace-nowrap">
+                            {isInCart ? 'Added' : 'Add to cart'}
+                        </span>
                     </Button>
                 </div>
             </div>
