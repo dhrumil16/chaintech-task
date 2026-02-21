@@ -57,18 +57,10 @@ const Register = () => {
             {/* Immersive Background */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-purple-950"></div>
-                {/* Visual Interest Overlay */}
-                <div className="absolute inset-0 opacity-40">
-                    <img
-                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=2000"
-                        alt="Background"
-                        className="w-full h-full object-cover mix-blend-overlay"
-                    />
-                </div>
                 {/* Soft Gradient & Blur Circles */}
-                <div className="absolute inset-0 bg-gradient-to-bl from-purple-900/90 via-purple-950/80 to-indigo-900/90 backdrop-blur-[2px]"></div>
-                <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-[120px] animate-pulse-slow"></div>
-                <div className="absolute top-1/4 -left-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] animate-pulse-slow-reverse"></div>
+                <div className="absolute inset-0 bg-gradient-to-bl from-purple-900/95 via-purple-950/90 to-indigo-900/95 backdrop-blur-[2px]"></div>
+                <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] animate-pulse-slow"></div>
+                <div className="absolute top-1/4 -left-20 w-96 h-96 bg-indigo-500/5 rounded-full blur-[100px] animate-pulse-slow-reverse"></div>
             </div>
 
             <div className="relative z-10 w-full max-w-md animate-fade-in-up">

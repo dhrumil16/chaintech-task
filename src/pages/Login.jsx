@@ -38,18 +38,10 @@ const Login = () => {
             {/* Immersive Background */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-indigo-950"></div>
-                {/* Visual Interest Overlay */}
-                <div className="absolute inset-0 opacity-40">
-                    <img
-                        src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000"
-                        alt="Background"
-                        className="w-full h-full object-cover mix-blend-overlay"
-                    />
-                </div>
                 {/* Soft Gradient & Blur Circles */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-indigo-900/90 via-indigo-950/80 to-purple-900/90 backdrop-blur-[2px]"></div>
-                <div className="absolute top-1/4 -left-20 w-96 h-96 bg-indigo-500/20 rounded-full blur-[120px] animate-pulse-slow"></div>
-                <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px] animate-pulse-slow-reverse"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-indigo-900/95 via-indigo-950/90 to-purple-900/95 backdrop-blur-[2px]"></div>
+                <div className="absolute top-1/4 -left-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px] animate-pulse-slow"></div>
+                <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/5 rounded-full blur-[100px] animate-pulse-slow-reverse"></div>
             </div>
 
             <div className="relative z-10 w-full max-w-md animate-fade-in-up">
