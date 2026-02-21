@@ -42,9 +42,9 @@ const Cart = () => {
                         <div key={item.id} className="bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col sm:flex-row items-center gap-6 group hover:border-indigo-100 transition-colors">
                             <div className="w-full sm:w-24 h-24 bg-white p-2 rounded-xl border border-gray-100 flex-shrink-0">
                                 <img
-                                    src={item.thumbnail}
+                                    src={item.images?.[0] || 'https://via.placeholder.com/150'}
                                     alt={item.title}
-                                    className="w-full h-full object-contain"
+                                    className="w-full h-full object-cover rounded-lg"
                                 />
                             </div>
 
@@ -52,7 +52,7 @@ const Cart = () => {
                                 <h3 className="text-lg font-semibold text-gray-900 line-clamp-1 mb-1">{item.title}</h3>
                                 <p className="text-sm text-gray-500 capitalize">{item.category}</p>
                                 <div className="mt-2 text-indigo-600 font-bold sm:hidden">
-                                    ${(item.price * item.quantity).toFixed(2)}
+                                    ${item.price * item.quantity}
                                 </div>
                             </div>
 
@@ -76,10 +76,10 @@ const Cart = () => {
 
                                 <div className="hidden sm:block text-right w-24">
                                     <div className="text-lg font-bold text-gray-900">
-                                        ${(item.price * item.quantity).toFixed(2)}
+                                        ${item.price * item.quantity}
                                     </div>
                                     <div className="text-xs text-gray-400">
-                                        ${item.price.toFixed(2)} each
+                                        ${item.price} each
                                     </div>
                                 </div>
 
@@ -103,7 +103,7 @@ const Cart = () => {
                         <div className="space-y-4 mb-6">
                             <div className="flex justify-between text-gray-500">
                                 <span>Subtotal</span>
-                                <span>${getCartTotal().toFixed(2)}</span>
+                                <span>${getCartTotal()}</span>
                             </div>
                             <div className="flex justify-between text-gray-500">
                                 <span>Shipping</span>
@@ -111,7 +111,7 @@ const Cart = () => {
                             </div>
                             <div className="border-t border-gray-100 pt-4 flex justify-between items-center text-lg font-bold text-gray-900">
                                 <span>Total</span>
-                                <span>${getCartTotal().toFixed(2)}</span>
+                                <span>${getCartTotal()}</span>
                             </div>
                         </div>
 

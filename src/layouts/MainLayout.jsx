@@ -4,6 +4,7 @@ import { useCart } from '../context/CartContext';
 import { useToast } from '../context/ToastContext';
 import { LogOut, ShoppingCart, User, Home, Package, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import SessionTimer from '../components/SessionTimer';
 
 const MainLayout = ({ children }) => {
     const { logout, user } = useAuth();
@@ -59,6 +60,8 @@ const MainLayout = ({ children }) => {
                         </div>
 
                         <div className="flex items-center space-x-2 sm:space-x-4">
+                            <SessionTimer />
+
                             <Link to="/cart" className="relative p-2 text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition-colors">
                                 <ShoppingCart size={22} />
                                 {getCartItemsCount() > 0 && (
