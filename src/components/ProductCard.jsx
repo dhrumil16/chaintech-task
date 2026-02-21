@@ -74,7 +74,7 @@ const ProductCard = ({ product }) => {
                             : '!bg-indigo-600 !border-indigo-600 !shadow-indigo-200 hover:!bg-indigo-700'
                             }`}
                     >
-                        <ShoppingBag size={18} className={isInCart ? 'animate-bounce' : ''} />
+                        <ShoppingBag size={18} />
                         <span className="font-bold text-sm whitespace-nowrap">
                             {isInCart ? 'Added' : 'Add to cart'}
                         </span>
