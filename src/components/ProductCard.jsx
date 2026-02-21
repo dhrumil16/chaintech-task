@@ -53,15 +53,15 @@ const ProductCard = ({ product }) => {
             </div>
 
             {/* Content Section */}
-            <div className="p-5 pt-2 flex flex-col flex-1">
-                <h3 className="text-sm sm:text-[15px] font-bold text-gray-900 line-clamp-2 mb-3 leading-snug group-hover:text-indigo-600 transition-colors duration-300" title={product.title}>
+            <div className="p-3 sm:p-5 pt-2 flex flex-col flex-1">
+                <h3 className="text-[12px] sm:text-[15px] font-bold text-gray-900 line-clamp-2 mb-2 sm:mb-3 leading-snug group-hover:text-indigo-600 transition-colors duration-300" title={product.title}>
                     {product.title}
                 </h3>
 
-                <div className="mt-auto flex items-center justify-between gap-3">
+                <div className="mt-auto flex flex-col gap-2">
                     <div className="flex flex-col">
-                        <span className="text-[10px] text-gray-400 font-semibold uppercase tracking-wider mb-0.5">Price</span>
-                        <span className="text-lg sm:text-xl font-black text-gray-900">
+                        <span className="text-[9px] text-gray-400 font-semibold uppercase tracking-wider">Price</span>
+                        <span className="text-base sm:text-xl font-black text-gray-900 leading-none">
                             ₹{Math.round(product.price * 83)}
                         </span>
                     </div>
@@ -69,13 +69,13 @@ const ProductCard = ({ product }) => {
                     <Button
                         onClick={(e) => { e.stopPropagation(); handleAddToCart(e); }}
                         variant={isInCart ? 'success' : 'primary'}
-                        className={`!w-auto !py-2.5 !px-5 !rounded-2xl flex items-center justify-center gap-2 transition-all duration-500 shadow-lg ${isInCart
+                        className={`!w-full !py-2 !px-3 !rounded-xl flex items-center justify-center gap-1.5 transition-all duration-500 shadow-lg ${isInCart
                                 ? '!bg-emerald-500 !border-emerald-500 !shadow-emerald-200 hover:!bg-emerald-600'
-                                : '!bg-indigo-600 !border-indigo-600 !shadow-indigo-200 hover:!bg-indigo-700 hover:!scale-105'
+                                : '!bg-indigo-600 !border-indigo-600 !shadow-indigo-200 hover:!bg-indigo-700'
                             }`}
                     >
-                        <ShoppingBag size={18} className={isInCart ? 'animate-bounce' : ''} />
-                        <span className="hidden sm:inline font-bold text-sm">Add to cart</span>
+                        <ShoppingBag size={14} className={isInCart ? 'animate-bounce' : ''} />
+                        <span className="font-bold text-[11px] whitespace-nowrap">Add to cart</span>
                     </Button>
                 </div>
             </div>
