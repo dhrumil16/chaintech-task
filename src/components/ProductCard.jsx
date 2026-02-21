@@ -16,29 +16,23 @@ const ProductCard = ({ product }) => {
         <div className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full overflow-hidden hover:-translate-y-1">
             <div className="relative pt-[100%] bg-white p-2 sm:p-6 overflow-hidden">
                 <img
-                    src={product.image}
+                    src={product.thumbnail}
                     alt={product.title}
                     className="absolute inset-0 w-full h-full object-contain p-3 sm:p-6 group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md sm:rounded-lg text-[10px] sm:text-xs font-bold text-gray-900 shadow-sm border border-gray-100">
+                <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md sm:rounded-lg text-[10px] sm:text-xs font-bold text-gray-900 shadow-sm border border-gray-100 uppercase">
                     {product.category}
                 </div>
             </div>
 
             <div className="p-3 sm:p-5 flex flex-col flex-1">
-                <div className="flex items-center gap-0.5 sm:gap-1 mb-1 sm:mb-2">
-                    {[...Array(5)].map((_, i) => (
-                        <Star
-                            key={i}
-                            size={12}
-                            className={`${i < Math.round(product.rating?.rate || 0)
-                                ? "text-amber-400 fill-amber-400"
-                                : "text-gray-200"
-                                }`}
-                        />
-                    ))}
-                    <span className="text-[10px] sm:text-xs text-gray-500 ml-0.5 sm:ml-1">
-                        ({product.rating?.count})
+                <div className="flex items-center gap-0.5 sm:gap-1 mb-1 sm:mb-2 text-amber-400">
+                    <Star size={14} className="fill-amber-400" />
+                    <span className="text-[10px] sm:text-xs font-bold text-gray-700">
+                        {product.rating}
+                    </span>
+                    <span className="text-[10px] sm:text-xs text-gray-400 ml-0.5 sm:ml-1">
+                        ({product.brand})
                     </span>
                 </div>
 
@@ -47,9 +41,16 @@ const ProductCard = ({ product }) => {
                 </h3>
 
                 <div className="mt-auto pt-2 sm:pt-4 flex flex-col xs:flex-row items-start xs:items-center justify-between gap-2 sm:gap-4">
-                    <span className="text-base sm:text-xl font-bold text-gray-900">
-                        ${product.price.toFixed(2)}
-                    </span>
+                    <div className="flex flex-col">
+                        <span className="text-base sm:text-xl font-bold text-gray-900">
+                            ${product.price}
+                        </span>
+                        {product.discountPercentage > 0 && (
+                            <span className="text-[10px] text-green-600 font-semibold">
+                                {product.discountPercentage}% OFF
+                            </span>
+                        )}
+                    </div>
                     <Button
                         onClick={handleAddToCart}
                         variant="primary"
