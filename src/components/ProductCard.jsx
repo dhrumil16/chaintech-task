@@ -63,8 +63,8 @@ const ProductCard = ({ product }) => {
                         className={`!w-auto !py-2 !px-4 !rounded-xl flex items-center justify-center gap-2 transition-all duration-300 ${isInCart ? '!bg-emerald-500 !border-emerald-500 hover:!bg-emerald-600' : ''
                             }`}
                     >
-                        {isInCart ? <Check size={18} /> : <ShoppingBag size={18} />}
-                        <span className="hidden xs:inline">{isInCart ? 'In Cart' : 'Add'}</span>
+                        <ShoppingBag size={18} />
+                        <span className="hidden xs:inline">Add to cart</span>
                     </Button>
                 </div>
             </div>
