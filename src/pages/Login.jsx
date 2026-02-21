@@ -150,12 +150,12 @@ const Login = () => {
                             </div>
 
                             <div className="text-center pt-6">
-                                <p className="text-[15px] text-gray-400 font-bold">
-                                    New to E-Shop?{' '}
-                                    <Link to="/register" className="text-indigo-600 hover:text-indigo-500 underline underline-offset-4 decoration-2 transition-all">
-                                        Create your account
-                                    </Link>
+                                <p className="text-[15px] text-gray-400 font-bold mb-1">
+                                    New to E-Shop?
                                 </p>
+                                <Link to="/register" className="text-indigo-600 hover:text-indigo-500 underline underline-offset-4 decoration-2 transition-all font-bold text-[15px]">
+                                    Create your account
+                                </Link>
                             </div>
                         </form>
                     </div>
