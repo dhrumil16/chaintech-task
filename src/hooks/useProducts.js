@@ -8,26 +8,12 @@ const useProducts = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('https://api.escuelajs.co/api/v1/products');
+                const response = await fetch('https://fakestoreapi.com/products');
                 if (!response.ok) {
                     throw new Error('Failed to fetch products');
                 }
                 const data = await response.json();
-
-                // Clean data: some Platzi images come as strings of arrays due to API eccentricities
-                const cleanedData = data.map(product => {
-                    let images = product.images;
-                    if (typeof images[0] === 'string' && images[0].startsWith('["')) {
-                        try {
-                            images = JSON.parse(images[0]);
-                        } catch (e) {
-                            // Fallback if parse fails
-                        }
-                    }
-                    return { ...product, images };
-                });
-
-                setProducts(cleanedData);
+                setProducts(data);
             } catch (err) {
                 setError(err.message);
             } finally {

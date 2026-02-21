@@ -1,27 +1,37 @@
 import { useState, useEffect } from 'react';
 import { useToast } from '../context/ToastContext';
+import { useAuth } from '../context/AuthContext';
 import { Timer } from 'lucide-react';
 
-const SessionTimer = ({ startMinutes = 60 }) => {
+const SessionTimer = ({ startMinutes = 5 }) => {
     const [timeLeft, setTimeLeft] = useState(startMinutes * 60);
     const { showToast } = useToast();
+    const { logout } = useAuth();
     const [hasNotified, setHasNotified] = useState(false);
 
     useEffect(() => {
-        if (timeLeft <= 0) return;
+        if (timeLeft < 0) return;
+
+        if (timeLeft === 0) {
+            showToast('Session expired. Logging out...', 'error');
+            setTimeout(() => {
+                logout();
+            }, 2000);
+            return;
+        }
 
         const intervalId = setInterval(() => {
             setTimeLeft(prev => prev - 1);
         }, 1000);
 
-        // Notify when 1 minute remains
+        // Notify when 1 minute remains (60 seconds)
         if (timeLeft === 60 && !hasNotified) {
-            showToast('1 minute remaining until session ends!', 'warning');
+            showToast('Only 1 minute left before auto-logout!', 'warning');
             setHasNotified(true);
         }
 
         return () => clearInterval(intervalId);
-    }, [timeLeft, showToast, hasNotified]);
+    }, [timeLeft, showToast, hasNotified, logout]);
 
     const formatTime = (seconds) => {
         const mins = Math.floor(seconds / 60);
@@ -38,7 +48,7 @@ const SessionTimer = ({ startMinutes = 60 }) => {
             }`}>
             <Timer size={16} className={isCritical ? 'animate-spin-slow' : ''} />
             <span className="font-mono font-bold text-sm">
-                {formatTime(timeLeft)}
+                {timeLeft > 0 ? formatTime(timeLeft) : "00:00"}
             </span>
         </div>
     );

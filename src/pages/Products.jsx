@@ -10,7 +10,7 @@ const Products = () => {
 
     // Get unique categories for the filter dropdown
     const categories = useMemo(() => {
-        const uniqueCategories = ['all', ...new Set(products.map(p => p.category?.name).filter(Boolean))];
+        const uniqueCategories = ['all', ...new Set(products.map(p => p.category).filter(Boolean))];
         return uniqueCategories;
     }, [products]);
 
@@ -18,7 +18,7 @@ const Products = () => {
     const filteredProducts = useMemo(() => {
         return products.filter(product => {
             const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
-            const matchesCategory = selectedCategory === 'all' || product.category?.name === selectedCategory;
+            const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
             return matchesSearch && matchesCategory;
         });
     }, [products, searchTerm, selectedCategory]);
@@ -52,7 +52,7 @@ const Products = () => {
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 border-b border-gray-200 pb-8">
                 <div>
                     <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight">Our Collection</h1>
-                    <p className="text-gray-500 mt-2 text-lg">Curated premium products for your lifestyle.</p>
+                    <p className="text-gray-500 mt-2 text-lg">Curated premium products in ₹ Rupees.</p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row w-full lg:w-auto items-center gap-4">
