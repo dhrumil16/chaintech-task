@@ -144,8 +144,8 @@ const MainLayout = ({ children }) => {
             {/* Footer */}
             <footer className="bg-white border-t border-gray-200 py-8 mt-auto">
                 <div className="max-w-7xl mx-auto px-4 text-center">
-                    <p className="text-gray-500 text-sm">
-                        &copy; 2024 E-Shop Dashboard. Crafted with <span className="text-red-500">♥</span> using React & Tailwind.
+                    <p className="text-gray-500 text-sm font-medium tracking-wide">
+                        &copy; 2024 E-Shop Dashboard all right reserved
                     </p>
                 </div>
             </footer>
