@@ -8,7 +8,7 @@ const Cart = () => {
     const { cart, removeFromCart, updateQuantity, getCartTotal, clearCart, getCartItemsCount } = useCart();
     const { showToast } = useToast();
 
-    const formatPrice = (price) => Math.round(price * 83);
+    const formatPrice = (price) => price.toLocaleString();
 
     if (cart.length === 0) {
         return (

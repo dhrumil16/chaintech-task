@@ -107,7 +107,7 @@ const Dashboard = () => {
                                         </p>
                                     </div>
                                     <div className="text-xl font-black text-indigo-600">
-                                        ₹{Math.round(item.price * item.quantity).toLocaleString()}
+                                        ₹{(item.price * item.quantity).toLocaleString()}
                                     </div>
                                 </div>
                             ))}
